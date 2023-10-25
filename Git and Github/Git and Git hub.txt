@@ -1,0 +1,225 @@
+
+                         				Git and Git hub   
+Github accounts
+1. 	username:manikandan-1207
+	email:manikandanmathayan.p@gmail.com
+	paswd:Mani@1207
+
+2.	username:dev-dev-dev-1
+	email:smartmani1207@gmail.com
+	paswd:Mani@12072002
+     
+Git Commands
+
+git config --global user.name         -> view user
+git config --global user.name "mani"  -> add user
+
+git config --global user.email        ->  view user email
+git config --global user.email "mani@gmail.com"  -> add user email
+
+
+git init .              create a local git repository in a directory
+git add  (file name 1) (file name 1)   Add the file from working directory to staging area 
+git add --all           Add the all file from working directory to staging area 
+git add .   (same as git add --all)
+
+git rm --cached (filename) - to remove the file from the staging area. 
+
+
+git status - used to locate files where it is.
+git log    - used to see the log for commited file
+git commit -m "comment" - add file to the git local repository in laptop
+
+git commit -a -m "to add line2"  - its used to add a wrk dir file into stagging area and commit it into local repo in a single line of command.
+
+
+git diff           	 -  Is used to compare the files with working directory and staging area.
+git diff --staged        Is used to compare the files with staging area and local repository.
+git diff --staged HEAD   (same as  git diff --staged )
+git diff HEAD       	 Used to compare the working directory file with the local repository
+git show  HEAD       
+git show 5dc368a16aeb  used to view the particular commit changes.
+
+git diff 5dc368a16aeb  041036a18bf1     - compare the code between two different commits 
+git diff HEAD     HEAD~2    
+
+git annotate index.html   -it show the details of who made what changes in the particular file.
+output looks like:
+6fe4c937        (manikandan     2023-09-07 18:17:34 +0100       1)<h1> this file writen by dev1 which is windows user <h1>
+
+git checkout 5dc368a16aeb  - move to commit on this commit ID represents.
+git switch -  move back to the previous commit.
+
+git remote add origin https://github.com/manikandan-1207/learnofgithub.git  - used to associate the local repository with remote repository.
+
+git clone https://github.com/manikandan-1207/learnofgithub.git   - clone whole particular repository from git hub to git(local machine).
+
+git pull    command to pull the only change from the remote repository not a too pull whole repository.
+git pull origin main
+
+git push origin main     - push the code from local repository to remote repository(github)
+
+For linux user /from the linux user ,if we going to push some changes to remote repository id aked for the user name and password.
+the password is not our account password it should be the PAT(public access token) generated from git hub.
+enter github/open settings/open developer option in left side bottom/open personal access token in left side/click classic/generate a ned token by select the scope
+(the token is your password)
+
+git push origin master
+username:manikandan-1207
+password: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
+
+Branches
+Default branch is master or main
+git branch - used to  list the branches in the repository.If the main and test branch are same the it shows only the main branch.
+git branch test - used to create the new branch called test.
+git checkout -b dev - used to create the branch and switch onto the branch.
+git checkout test  - checkout is used to switch between commits and branches.
+MERGE
+if you want to merge the changes in the master branch.you should run the  "git merge test " inside the master branch.because its a destignation branch.
+git merge test - used to merge the changes between branches.
+Merge conflits
+Its happen when both developer trying to update the same code.
+
+git push origin master works based on git hub last commit.
+Assume that there is a 2 developer. both clone the same repositry on their local for doing some code change.
+if the developer 1 made some changes and push the code to remote repository it dosn't happen any issue. because the last commit of github and cloned repos in same.
+after the developer 2 made some changes and try to uplod their code . it cause error. beacuse of the dev1 changes the last commit of github and 
+cloned repos of  developer2 is different.
+we can use git pull for last repository the made push .. while pulling one more commit has made for merge our code and remote repos code
+
+To over come this issue they worked on branches.
+
+the developer 1 is in my local windows.
+and my developer 2 is in my AWS (Git) instance.
+
+
+Github
+---
+Git hub is a code hosting platform.
+It is an distributed version control system. 
+-----------
+create a new repository
+private or public
+readme.md -> (define about your repository consists)
+.md stands for Mark down language
+branches -> by default are in master branch
+Public access token
+
+----
+Clone a repository using SSH key because its secure and semeless process.
+Connecting the git hub to other environment like windows and linux user, using the SSH key based authentication. not a https
+1. generate a ssh key in linux or windows.
+	ssh-keygen or  ssh-keygen -t ed25519 -C "your_email@example.com"
+2.Start the ssh-agent
+	eval "$(ssh-agent -s)"
+3.Add the ssh private key to the ssh-agent
+	ssh-add ~/.ssh/id_rsa
+4. add the publlic key to the git hub
+	1.Copy the generated public ssh key
+	2.open settings
+	3.open ssh and gpg 
+	4.Click new sshkey  
+	5.give the titale and paste the SSH public key.
+5. Now you clone the repository using ssh key
+--------
+Add a git repository which is created local to git hub.if we directly push our repository in to github using origin master it won't accept because the 
+it confused where to add the repository in git hub account.
+1. need to create a empty repository in git hub.
+2. Configure changes in .git file (using command)
+	git remote add origin git@github.com:manikandan-1207/Demo.git       to establish a connect between local git repo to git hub repo.
+3. check the config file if the remote origin details are added or not.
+4.git push -u origin main
+
+-----
+How a Java developer push code onto remote repository.
+Create a project.
+navigate to folder.
+make it as local git directory.
+Then same as what we done for push new repository from local to git hub.
+-------------------------------- 
+Github forking
+Used to take the remote repository from one git hub account to another account.
+github account 1(learnofgithub) --------> github account 2()(learnofgithub) 
+-------------------
+Github pull request
+
+updates code (on my account)  ------------> old code (on forked account)
+By creating the pull request help them to update the their code as latest in their account once the pull request is verified by them.
+----------------------
+Git hub private repository
+------------------
+Collabrator
+If the owner can invite some one to collabrate the repository.
+the collabrator can able to directly able to do changes on the owner account.
+settings in repository -> collabrator -> add people.
+------------------
+Github protected branch.
+
+settings -> branches-> add a branch protection rule -> branch name pattern -> (add the specific rule) -> create
+------
+Github tag
+
+git tag v1.0    ->creating a new tag 
+git tag -a v1.1  5dc368a16aeb  -m "new features introduced" ->creating a new tag 
+git push origin tag v1.1  -> to push a tag from  git to github
+-------------------------
+Reverting changes
+
+Revert changes in working directory its nothin but remove the newly added lines.
+git restore <filename>
+or
+git checkout  -- <filename>
+((when the changes revert from stagin area or local repo it will comes to workin directory. need to revert in the working directory aswell))
+
+Revert changes in staging or index area
+git restore --staged <filename>
+
+Revert changes in local repository
+git reset HEAD~    /  git reset HEAD^    / git reset HEAD^1 /  git reset HEAD^2
+
+Revert changes in remote repository
+***Dont have a direct way to do ******
+-----------
+git ignore (used to ignore the file while staging,commiting and pushing in git hub)
+
+to create a git ignore file
+touch .gitignore
+
+need to add the file to be innored in the .gitignore file
+vi .gitignore
+1.txt
+2.txt
+3.txt
+*.sql
+-------------
+Git rebase  
+Git rebase is used to combine the some particular commits  into single commit
+
+git rebase -i Head^3
+pick -it be the commit
+squash - it be included in the pickec commit
+:wq
+need to give the -m messages
+:wq
+it will updates as a rebase commit.
+
+error: cannot 'squash' without a previous commit
+You can fix this with 'git rebase --edit-todo' and then run 'git rebase --continue'.
+Or you can abort the rebase with 'git rebase --abort'.
+
+---------------------
+git fetch vs pull vs merge
+
+git pull - used to pull the changes from remote repository to both local repository and working directory
+git fetch - it only pull the changes from remote repository to local repository
+git merge - it only pull the changes from local repository to working directory
+which means  git pull = git fetch + git merge
+
+
+git pull origin main
+git fetch origin main
+git merge
+
+------------------
+github project
+

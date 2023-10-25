@@ -1,0 +1,13 @@
+1.How it works
+2.Onperm vs cloud storage
+3.Cloud working concept  	
+	R- Remote
+	I-Internet
+	R- Rent
+4.Cloud providers 
+	AWS(market top),azure,gcp,ibm,digital ocean,Alibaba,big data , oracle...
+
+5.AWS  Invited the cloud 1976 !  
+	1st Implemented in 2006 Northern vergenia,
+
+	

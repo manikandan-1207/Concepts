@@ -1,0 +1,76 @@
+Ip address
+
+Command for show IP address
+ip a
+ip addr show     It both cmd show ip address along with the details.
+hostname -I      It show ip address only 
+
+----------
+How to enable the password based autherntication
+cd /etc/sshd_config
+enable the passwordauthentication yes
+comment out the passwordauthentication NO
+restart the sshd service by using --> service sshd reload
+-------------------------
+To change the HostName of the server permanently
+1) vi /etc/hostname  (here change the host name what you want)
+2) Reboot the server
+
+For Temporary 
+1) hostname jenkins
+2) Logoff and login
+------
+Set an environment variable (not sure)
+cd /root
+vi .bash_profile
+
+add code
+echo $(systemctl start jenkins)
+save and exit
+---------------
+How to normal user as a SUDO user 
+visudo - open the sudo userfile
+(------NOTE-----)*******DON'T GIVR ANY SPECIAL CHARACTERS IN FILE OTHERWISE IT WILL CORRUPT*************
+click shift+G - navigate to end of the file
+ansadmin   ALL=(ALL)   NOPASSWD: ALL
+wq
+
+------------
+How to enable the ssh key based authentication for the user 
+login as a particular user(ansadmin) which you want to enable the SSH based authentication
+1) ssh-keygen - It will create the public and private under the .ssd in /home/ansadmin
+2) and also we need to enable the SSH agent for our server
+
+-------------------
+Used to manage the packages in linux(install, update, remove, list,search and some more) 
+yum - yellowdog updater modifier
+	yum search wget  - its is ued to search the packages in the yum package manager.
+apt - Advanced packaging tool
+wget - to download the file over http ans https
+
+find / -name context.xml  Find cmd is used to find the file in the linux system
+--------------Linux file structure----------------
+/opt - In the opt area we have to install the additional software packages that not a part of core operating system.
+
+------------------
+create user and set the password for the user
+sudo useradd  mani 
+passwd mani 
+
+create group
+sudo groupadd mygroup
+
+add the user in group
+sudo usermod -aG mygroup username
+
+verify the user the group
+group username
+
+To list the gruops in linux
+cat /etc/group
+
+
+
+
+
+

@@ -1,0 +1,20 @@
+1.TCP/IP Protocols
+2.DNS (Domain Name System)
+3.Firewalls and Security:
+4.Load Balancing: 
+5.VPN (Virtual Private Network):
+6.CDN (Content Delivery Network):
+7.Proxy Servers:
+8.Network Monitoring and Troubleshooting: 
+9.Subnetting and IP Addressing:
+10:Virtualization and Cloud Networking:
+11.Software-Defined Networking (SDN): 
+12.Container Networking:
+13.Network Automation: 
+14.Continuous Integration and Delivery (CI/CD)
+15.Security Best Practices
+16.Compliance and Regulations:
+
+
+
+OSI Model

@@ -1,0 +1,27 @@
+Tomcat installation
+1. set up the ec2 instace 
+---
+2. Tomcat is running over the java , So need to install the java-jdk
+	yum install java
+3. the tomcat over the https://tomcat.apache.org/
+4. Download the tomcat in /opt dir in linux machine
+	wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.80/bin/apache-tomcat-9.0.80.tar.gz
+5.extract the tar file 
+	tar -xvzf  apache-tomcat-9.0.80.tar.gz
+6. Start up the tomcat server 
+	cd /opt/tomcat/bin
+	./startup.sh (this script is used to start the tomcat services)
+7. tomcat UI can able to access the 8080 port. so we need to enable on the security group.
+8. http://174.129.57.200:8080
+9.Manager app access denied - Basically the manager app is only enabled for the local user.
+	 context.xml file are want to modify for access the manager app  
+	 and comment out the local host configuration in context.xml file
+	i)  /opt/tomcat/tomcat/webapps/host-manager/META-INF/context.xml
+	ii) /opt/tomcat/tomcat/webapps/manager/META-INF/context.xml
+
+10.Refresh the Manager app page. If won't show the credential pages Need to restart the tomcat services in  cd /opt/tomcat/bin
+
+
+
+
+pw

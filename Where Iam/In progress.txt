@@ -1,0 +1,108 @@
+Associate software engineer(Application support maintainence) -> To be an Devops engineer
+
+06/09/2023
+I am 21 year's old boy, working as a Associate software engineer(Application support maintainence) without own project access at Prodapt solutions - Chennai.
+I have completed the one year at this company and have been in a project for more the 8 months even if they didn't take an action of my project access.
+I am playing a dummy role in my team. Even if I have not in the team they can easily manage the works among themselves.
+My Roles and responsiblities now : Low Change creation, P4 tickets handling, Daily reports sending, WSR prepration,report automation and shadowing the other work.
+So, decided to change the work which want to do. started to learing the devops things without consistent on before 6/09/2023.
+Think to to take a 6th month course but can't able to afford.  its cost around 70k
+And I start to practice a learing devops and english consistently toward my goal.
+While searching for a road map of devops engineer and I founded these page : https://roadmap.sh/devops?r=devops-beginner   and    https://roadmap.sh/devops
+
+Devops topics need to learn
+1. Git and Github  : https://prodaptsolutions.udemy.com/course/valaxy-git/learn/lecture/22587632#overview       (6.5 hrs)
+Status : completed
+
+2. CI/CD
+
+3.Jenkins        :	https://prodaptsolutions.udemy.com/course/jenkins-masterclass/learn/lecture/23825024#reviews     (2.5 hrs)
+4. Networking concepts
+5.Ansible
+6.AWS
+7.EC2
+8.S3
+9.Shell script
+10.Docker
+11.EBS
+12.VPC
+13.ELB
+14.Apache tomcat
+15.Rancher
+16.Harbor
+17.Sourcetree
+18.Flux
+
+In the text file I have marking the things what I learn on that day
+
+Before I have learned the GIT and Git commands
+
+06/09/2023
+Git hub, 
+Creating the repositories in git hub,
+Clone a repository from Git hub,
+push a code from local to remote repository.
+
+07/09/2023
+
+Working with developers: working with other developer code ,
+Git clone vs git pull,
+Unable to push changes onto remote repository because of single branch.
+
+08/09/2023
+Connecting to git hub using the SSh key,
+Map local repo with remote repository - git remote add,
+How a Java developer push code onto remote repository.
+
+09/09/2023
+Git commits- Working with commits on Git,
+Know information about specific commit on Git - git show, 
+Working with commits on GitHub,
+Commit changes directly on GitHub
+
+10/09/2023
+ Why do we need branches,
+Branching strategy to protect working code,
+Working with branches on GitHub, 
+Working with branches on Git,
+Committing changes on branches,
+Merging changes onto master branch from dev,
+Resolving merge conflicts.
+Fork a repository,
+Github pull request
+
+12/09/2023
+Working with private repository
+Add collabrator to a git hub repository
+Create a protected branch
+Tagging a commit
+Reverting changes 
+using .gitignore
+git rebase
+git fetch vs pull vs merge
+Introduction to git project 
+
+13/09/2023
+Set up the git repository and branches for a new project 
+Allowing developer to check in
+Enabling devops workflow on dev branch(not done)
+Pull Request (PR) to merge code from Dev branch to UAT branch(not done)
+Release code onto Production(not done)
+
+14/09/2023
+Honestly I'm confuused about what can I going to learn next..
+Because I didn't planned before... got a lesson from this abt planning is very important before start a new thing.
+Then plan to learn a networking concepts like ips, DNS,VPN,Load balancing,etc....   
+
+15/09/2023
+I chosed a wrong vedios for learning but i learneed OSI model in that vedio. its also important for understanding the how the data flow.
+
+17/09/2023
+Again I started to learn jenikns
+Installed Jenkins on the aws server
+
+20/09/2023
+Dashboard overview 
+Created a first jenkis job
+
+

@@ -1,0 +1,100 @@
+						Jenkins
+Its a one of the most popular devops tool
+Key devops CI/CD tool
+Automate build and deployment
+Vast ecosystem which contains 1400 plugins and extending...
+
+Pipeline : its a series of events that are connected together to make them quick software delivery.
+------------
+Installation
+
+Its a java bases application so we need java to run
+Access Jenkis on web using 8080 because its defaulty run this port
+
+https://www.jenkins.io/download/      
+Select the stable version files based on your system OS
+
+for redhat OS run the below commands
+
+sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+  sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
+
+Java --version     --> cmd to check the java is installed or not in your system.
+
+yum install fontconfig java-11-openjdk
+  yum install jenkins
+
+
+jenkins service status  or systemctl status jenkins    -->  to check the jenkins is up or not 
+jenkins service start  or systemctl start  jenkins  --> to start jenkins and  use stop insted of start for stop the jenkins services.
+
+add the port 8080 in server 
+ss to check the ports in server
+url sample :  https://34.207.202.238:8080
+
+--------------
+Jenkins UI
+To find the initial password in the location
+
+/var/lib/jenkins/secrets/initialAdminPassword
+8a8a7caeb16b4d47a332afd897503d09
+
+--------------------
+Dashboard overview
+
+New Item - its used to create a new jenkins project
+People - Its used to manage the peoples in jenkins
+Build history - it show the build history in the graph format
+Manage jenkins - Manage the jenkins configurations and the vast plugins
+Myviews - Display the all projects.
+
+once open the project
+Status - show the status of the builds
+changes
+workspace
+Build now - To build the project
+Configure - to change the build configurations
+Delete project - for delete the project
+rename- to rename the project
+Build history - It shows the some latest builds and status of the builds
+
+Particular build UI page
+status - build status
+console output - it show the all detailed in the console
+delete build - to delete the build
+Previous build - navigate to previous build 
+next builds - navigate to next build
+--------------------
+Help to start the jenkins while the host will turn up
+Set an environment variable (not sure its proer way but its works)
+cd /root
+vi .bash_profile
+add code
+echo $(systemctl start jenkins)
+save and exit
+source ~/.bash_profile
+
+--------------------
+Intrgrating the Github with jenkins
+Github ---> jenkins(GIT ) 
+
+1. need to install GIT in jenkins CLI
+sudo yum install git
+2.Install GitHub plug in Jenkins GUI
+Manage plugin ->Github ->install
+The dependices package also auto install while install the GITHUB plugin
+3.configure GIT on jenkins GUI
+Manage plugin ->tools->Git 
+Name of the git
+Path to Git executable (whereis git)
+--------------------
+Pull the code from git hub to jenkins workspace
+1.create a job
+2.select  the source code management as git
+3.enter the branch
+4.save and build now 
+
+It will clone all the code from git hub to jenkins under the var/lib/jenkins/workspace/githubpull
+var/lib/jenkins/workspace/githubpull --> all the build informatio stored in this area under the job name.
+--------------------------
+Configure the maven as a BUILD tool

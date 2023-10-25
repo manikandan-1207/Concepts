@@ -1,0 +1,78 @@
+In most Linux distributions, including Red Hat-based systems like Red Hat Enterprise Linux (RHEL) and CentOS, a firewall management tool called "firewalld" is commonly used. Firewalld provides a convenient way to configure and manage firewall rules on your server. Here's how to install and use firewalld on your Red Hat server:
+
+**Step 1: Check if Firewalld is Installed**
+
+Firewalld is included by default in many Red Hat-based Linux distributions. To check if it's already installed on your system, run the following command:
+
+```bash
+sudo systemctl status firewalld
+```
+
+If it's installed, you'll see information about the service's status. If it's not installed, you'll get an error message indicating that the service is not found.
+
+**Step 2: Install Firewalld (If Not Installed)**
+
+If firewalld is not installed on your server, you can install it using the package manager for your distribution. On Red Hat-based systems, you can use the `yum` package manager for older versions (RHEL 7 and earlier) or `dnf` for newer versions (RHEL 8 and later). Here are the commands:
+
+For RHEL 8 and newer (using `dnf`):
+
+```bash
+sudo dnf install firewalld
+```
+
+For RHEL 7 and earlier (using `yum`):
+
+```bash
+sudo yum install firewalld
+```
+
+**Step 3: Start and Enable Firewalld**
+
+After installation, you need to start the firewalld service and enable it to start automatically at boot time. Use the following commands:
+
+```bash
+sudo systemctl start firewalld
+sudo systemctl enable firewalld
+```
+
+**Step 4: Basic Firewalld Commands**
+
+Now that firewalld is installed and running, you can use it to manage your firewall rules. Here are some basic firewalld commands:
+
+- To check the status of the firewall:
+
+  ```bash
+  sudo firewall-cmd --state
+  ```
+
+- To list the currently active zones:
+
+  ```bash
+  sudo firewall-cmd --get-active-zones
+  ```
+
+- To list the services available in the current zone (e.g., the "public" zone):
+
+  ```bash
+  sudo firewall-cmd --list-services --zone=public
+  ```
+
+- To add a service to a zone (e.g., to open SSH port 22):
+
+  ```bash
+  sudo firewall-cmd --zone=public --add-service=ssh --permanent
+  ```
+sudo firewall-cmd --zone=public --add-port=8080/tcp --permanent
+
+
+  The `--permanent` flag makes the change persistent (survives reboots).
+
+- To reload the firewall rules after making changes:
+
+  ```bash
+  sudo firewall-cmd --reload
+  ```
+
+These are just basic examples of firewalld commands. You can customize your firewall rules further based on your specific requirements.
+
+Remember to adjust your firewall rules to allow or deny traffic on the necessary ports according to your server's security needs.
